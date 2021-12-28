@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "RecetteSimplon": {
+    "APITestAngular": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/RecetteSimplon",
+            "outputPath": "dist/APITestAngular",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -68,10 +68,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "RecetteSimplon:build:production"
+              "browserTarget": "APITestAngular:build:production"
             },
             "development": {
-              "browserTarget": "RecetteSimplon:build:development"
+              "browserTarget": "APITestAngular:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,7 +79,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "RecetteSimplon:build"
+            "browserTarget": "APITestAngular:build"
           }
         },
         "test": {
@@ -102,5 +102,5 @@
       }
     }
   },
-  "defaultProject": "RecetteSimplon"
+  "defaultProject": "APITestAngular"
 }

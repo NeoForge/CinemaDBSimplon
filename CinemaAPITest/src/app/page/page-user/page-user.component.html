@@ -1,0 +1,20 @@
+<div>
+    <input type="text" [(ngModel)]="nameToSearch" /><button (click)="searchActor()">Chercher</button><button (click)="clear()">clear</button>
+</div>
+<div *ngIf = "listOfActor && !isSearchingActor && !isSearchingMovie">
+    <div *ngFor="let actor of listOfActor">
+        <button (click)="searchAllMovieByActor(actor.id)">{{actor.name}}</button>
+    </div>
+</div>
+<div *ngIf = "listOfActorSearched && isSearchingActor && !isSearchingMovie">
+    <div *ngFor="let actor of listOfActorSearched">
+        <button (click)="searchAllMovieByActor(actor.id)">{{actor.name}}</button>
+    </div>
+</div>
+
+<div *ngIf="listOfMovie && isSearchingMovie">
+    <div *ngFor="let movie of listOfMovie">
+        {{movie.title}}
+        <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="" width="200" height="300">
+    </div>
+</div>
