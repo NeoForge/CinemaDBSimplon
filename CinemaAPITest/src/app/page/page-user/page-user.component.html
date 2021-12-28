@@ -1,20 +1,11 @@
-<div>
-    <input type="text" [(ngModel)]="nameToSearch" /><button (click)="searchActor()">Chercher</button><button (click)="clear()">clear</button>
-</div>
-<div *ngIf = "listOfActor && !isSearchingActor && !isSearchingMovie">
-    <div *ngFor="let actor of listOfActor">
-        <button (click)="searchAllMovieByActor(actor.id)">{{actor.name}}</button>
-    </div>
-</div>
-<div *ngIf = "listOfActorSearched && isSearchingActor && !isSearchingMovie">
-    <div *ngFor="let actor of listOfActorSearched">
-        <button (click)="searchAllMovieByActor(actor.id)">{{actor.name}}</button>
-    </div>
-</div>
+<input type="text" [(ngModel)]=searchValue><button (click)="Search()">Search</button>
 
-<div *ngIf="listOfMovie && isSearchingMovie">
-    <div *ngFor="let movie of listOfMovie">
-        {{movie.title}}
-        <img src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}" alt="" width="200" height="300">
+<div *ngIf="searchResults">
+    <h1>Search Result</h1>
+    <div *ngFor="let Result of searchResults">
+        <h2>{{Result.name}}</h2>
+        <p>{{Result.overview}}</p>
+        <img src="http://image.tmdb.org/t/p/w185/{{Result.poster_path}}">
     </div>
+
 </div>
