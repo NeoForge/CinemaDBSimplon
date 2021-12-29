@@ -18,13 +18,21 @@ export class PageUserComponent implements OnInit {
   searchResults: any = [];
   Search() {
     if (this.searchValue.length > 0) {
+      this.movieSearchResults = [];
+      this.actorSearchResults = [];
       this.movieService.multiSearch(this.searchValue, 1).subscribe((data:any) => {
         this.searchResults = data.results;
         console.log(data);
+        if(this.searchResults.length >= data.total_results-1){
+          this.SortSearch();
+        }
         for(let i =2; i<=data.total_pages; i++){
           this.movieService.multiSearch(this.searchValue, i).subscribe((data:any) => {
             this.searchResults = this.searchResults.concat(data.results);
             console.log(this.searchResults);
+            if(this.searchResults.length >= data.total_results-1){
+              this.SortSearch();
+            }
           });
         }
       });
@@ -35,4 +43,25 @@ export class PageUserComponent implements OnInit {
     }
 
   }
+
+  actorSearchResults: any = [];
+  movieSearchResults: any = [];
+  SortSearch()
+  {
+    for(let i = 0 ;i<this.searchResults.length;i++)
+    {
+      if(this.searchResults[i].media_type == "person")
+      {
+        this.actorSearchResults.push(this.searchResults[i]);
+      }
+      else
+      {
+        this.movieSearchResults.push(this.searchResults[i]);
+      }
+    }
+    console.log(this.actorSearchResults);
+    console.log(this.movieSearchResults);
+    
+  }
 }
+

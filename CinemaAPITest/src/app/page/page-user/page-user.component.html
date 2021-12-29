@@ -1,11 +1,17 @@
 <input type="text" [(ngModel)]=searchValue><button (click)="Search()">Search</button>
 
-<div *ngIf="searchResults">
-    <h1>Search Result</h1>
-    <div *ngFor="let Result of searchResults">
-        <h2>{{Result.name}}</h2>
-        <p>{{Result.overview}}</p>
-        <img src="http://image.tmdb.org/t/p/w185/{{Result.poster_path}}">
-    </div>
 
+
+
+<div *ngIf="movieSearchResults">
+    <h1>Movie Result</h1>
+    <div *ngFor="let Result of movieSearchResults">
+        <app-movie-card [movie]="Result"></app-movie-card>
+    </div>
+</div>
+<div *ngIf="actorSearchResults">
+    <h1>Actor Result</h1>
+    <div *ngFor="let Result of actorSearchResults">
+        <app-actor-card [actor]="Result"></app-actor-card>
+    </div>
 </div>

@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
 import { PageUserComponent } from './page/page-user/page-user.component';
 import { FormsModule } from '@angular/forms';
+import { MovieCardComponent } from './components/movie-card/movie-card.component';
+import { ActorCardComponent } from './components/actor-card/actor-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PageUserComponent
+    PageUserComponent,
+    MovieCardComponent,
+    ActorCardComponent
   ],
   imports: [
     BrowserModule,
