@@ -10,6 +10,8 @@ export class MovieCardComponent implements OnInit {
   constructor() { }
   @Input() movie= "";
   ngOnInit(): void {
+    console.log(this.movie);
+    
   }
 
 }
