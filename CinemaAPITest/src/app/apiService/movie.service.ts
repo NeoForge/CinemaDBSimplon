@@ -12,5 +12,8 @@ export class MovieService {
   multiSearch(query: string,page : number ) {
     return this.http.get(`${environment.apiUrl}/search/multi?query=${query}&api_key=${environment.apiKey}&page=${page}`);
   }
+  FindAllMovieByActorID(id : number,page : number) {
+    return this.http.get(`${environment.apiUrl}/person/${id}/movie_credits?api_key=${environment.apiKey}&page=${page}`);
+  }
 
 }

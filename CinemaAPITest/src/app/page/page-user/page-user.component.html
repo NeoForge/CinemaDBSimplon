@@ -1,20 +1,26 @@
-<input type="text" [(ngModel)]=searchValue><button (click)="Search()">Search</button>
-
-
-
-
+<div id="SearchBar">
+    <input type="text" [(ngModel)]=searchValue><button (click)="Search()" >Search</button>
+</div>
 
 <div *ngIf="actorSearchResults">
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ActorCollapse" aria-expanded="false" aria-controls="collapseExample">Actor Result</button>
-    <div *ngFor="let Result of actorSearchResults" id="ActorCollapse">
+    <div id="ActorCollapse">
         <div id="GridTest">
-            <app-actor-card [actor]="Result"></app-actor-card>
+            <div *ngFor="let Result of actorSearchResults" >
+                <app-actor-card [actor]="Result"></app-actor-card>
+            </div>
         </div>
+        
     </div>
 </div>
 <div *ngIf="movieSearchResults">
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#MovieCollapse" aria-expanded="false" aria-controls="collapseExample">Movie Result</button>
-    <div *ngFor="let Result of movieSearchResults" id="MovieCollapse">
-        <app-movie-card [movie]="Result"></app-movie-card>
+    <div id="MovieCollapse">
+        <div id=GridTest>
+            <div *ngFor="let Result of movieSearchResults" >
+                <app-movie-card [movie]="Result"></app-movie-card>
+            </div>
+        </div>
     </div>
+    
 </div>

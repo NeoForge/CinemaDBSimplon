@@ -18,6 +18,7 @@ export class MovieCardComponent implements OnInit {
   posterUrl:string = environment.imageUrl;
   popularity: number = 0;
   originalLanguage : string = "";
+  idOfOverview : string = "";
   ngOnInit(): void {
     console.log(this.movie);
     this.media_Type = this.movie.media_type;
@@ -28,7 +29,7 @@ export class MovieCardComponent implements OnInit {
     this.popularity = this.movie.popularity;
     this.originalLanguage = this.movie.original_language;
     this.posterUrl = this.posterUrl + "w185" + this.movie.poster_path;
-    
+    this.idOfOverview="#"+this.movie.id;
   }
 
 }

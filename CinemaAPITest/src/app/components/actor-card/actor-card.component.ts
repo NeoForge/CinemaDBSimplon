@@ -19,7 +19,14 @@ export class ActorCardComponent implements OnInit {
     this.Name = this.actor.name;
     this.popularity = this.actor.popularity;
     this.knowForDepartment = this.actor.known_for_department;
-    this.profilePictureUrl = this.profilePictureUrl + "w185" + this.actor.profile_path;
+    if(this.actor.profile_path != null)
+    {
+      this.profilePictureUrl = this.profilePictureUrl + "w185" + this.actor.profile_path;
+    }
+    else
+    {
+      this.profilePictureUrl = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGHSXuWiK-ikPb3o_GbRx9HUppDkOLQKR6lw&usqp=CAU";
+    }
   }
 
 }

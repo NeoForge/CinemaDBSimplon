@@ -1,0 +1,13 @@
+#GridTest
+{
+    display: flex;
+    flex-direction: row ;
+    width: 100%;
+    overflow: auto;
+    
+}
+#SearchBar
+{
+    display: flex;
+    justify-content: center;
+}
