@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from 'src/app/apiService/movie.service';
-
 @Component({
   selector: 'app-page-user',
   templateUrl: './page-user.component.html',

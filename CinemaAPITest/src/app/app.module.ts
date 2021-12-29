@@ -8,13 +8,15 @@ import { PageUserComponent } from './page/page-user/page-user.component';
 import { FormsModule } from '@angular/forms';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { ActorCardComponent } from './components/actor-card/actor-card.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     PageUserComponent,
     MovieCardComponent,
-    ActorCardComponent
+    ActorCardComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
