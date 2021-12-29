@@ -10,15 +10,8 @@ export class ActorCardComponent implements OnInit {
 
   constructor() { }
   @Input() actor : any= "";
-  Name: string = "";
-  popularity: number = 0;
-  knowForDepartment: string = "";
   profilePictureUrl:string = environment.imageUrl;
   ngOnInit(): void {
-    console.log(this.actor);
-    this.Name = this.actor.name;
-    this.popularity = this.actor.popularity;
-    this.knowForDepartment = this.actor.known_for_department;
     if(this.actor.profile_path != null)
     {
       this.profilePictureUrl = this.profilePictureUrl + "w185" + this.actor.profile_path;

@@ -2,3 +2,8 @@
 {
     overflow: auto;
 }
+.card-img-top
+{
+    width: 286px;
+    height: 430px;
+}
