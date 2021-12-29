@@ -11,7 +11,10 @@ export class PageUserComponent implements OnInit {
 
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.searchValue = "Tom Holland";
+    this.Search();
+   }
 
   searchValue: string = "";
   searchResults: any = [];

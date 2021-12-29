@@ -3,15 +3,18 @@
 
 
 
+
+<div *ngIf="actorSearchResults">
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ActorCollapse" aria-expanded="false" aria-controls="collapseExample">Actor Result</button>
+    <div *ngFor="let Result of actorSearchResults" id="ActorCollapse">
+        <div id="GridTest">
+            <app-actor-card [actor]="Result"></app-actor-card>
+        </div>
+    </div>
+</div>
 <div *ngIf="movieSearchResults">
     <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#MovieCollapse" aria-expanded="false" aria-controls="collapseExample">Movie Result</button>
     <div *ngFor="let Result of movieSearchResults" id="MovieCollapse">
         <app-movie-card [movie]="Result"></app-movie-card>
-    </div>
-</div>
-<div *ngIf="actorSearchResults">
-    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#ActorCollapse" aria-expanded="false" aria-controls="collapseExample">Actor Result</button>
-    <div *ngFor="let Result of actorSearchResults" id="ActorCollapse">
-        <app-actor-card [actor]="Result"></app-actor-card>
     </div>
 </div>
