@@ -24,5 +24,4 @@ export class MovieService {
   FindTVShowById(id : number) {
     return this.http.get(`${environment.apiUrl}/tv/${id}?api_key=${environment.apiKey}`);
   }
-
 }

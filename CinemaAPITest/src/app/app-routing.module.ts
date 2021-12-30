@@ -6,6 +6,7 @@ import { PageUserComponent } from './page/page-user/page-user.component';
 const routes: Routes = [
   {path:'search',component:PageUserComponent,pathMatch:'full'},
   {path:'detail/:id/:type',component:DetailComponent,pathMatch:'full'},
+  {path: '', redirectTo: 'search', pathMatch: 'full'},
   {path: '**', redirectTo: 'search', pathMatch: 'full'},
 ];
 

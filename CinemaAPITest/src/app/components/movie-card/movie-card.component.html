@@ -7,10 +7,7 @@
       <div *ngIf="movie.media_type == 'tv'">
         <h5 class="card-title">{{movie.name}}</h5>
       </div>
+      <p class="card-text">Date de Sortie {{movie.release_date}}</p>
       <p class="card-text">Score de popularité {{movie.popularity}}</p>
-      <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Description</button>
-      <div class="collapse" id="collapseExample">
-        <div class="card card-body">{{movie.overview}}</div>
-      </div>
     </div>
   </div>

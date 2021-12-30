@@ -1,10 +1,17 @@
+<button (click)="goBack()">Back to Search</button>
+
 <div *ngIf = "type == 'tv'">
     <h1>{{data.name}}</h1>
-
+    <img src={{image}}>
 </div>
 <div *ngIf = "type == 'movie'">
     <h1>{{data.title}}</h1>
+    <img src={{image}}>
 </div>
 <div *ngIf = "type == 'person'">
-    {{data.name}}
+    <h1>{{data.name}}</h1>
+    <img src={{image}}>
+    <div *ngFor="let movie in data.know_for">
+        <h3>{{movie.title}}</h3>
+    </div>
 </div>
