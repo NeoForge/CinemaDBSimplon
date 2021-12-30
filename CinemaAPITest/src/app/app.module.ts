@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { ActorCardComponent } from './components/actor-card/actor-card.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { DetailComponent } from './page/detail/detail.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     PageUserComponent,
     MovieCardComponent,
     ActorCardComponent,
-    NavbarComponent
+    NavbarComponent,
+    DetailComponent
   ],
   imports: [
     BrowserModule,
