@@ -2,5 +2,5 @@
 <button (click)="RandomMovie(latest.id)" >Montre moi</button>
 <div *ngIf="randomResult">
     <p>Je vous suggère de regarder : <b>{{randomResult.original_title}}</b></p>
-    <app-movie-card [movie]="randomResult"></app-movie-card>
+    <app-movie-detail [movie]="randomResult"></app-movie-detail>
 </div>
