@@ -1,6 +1,6 @@
 <div *ngIf="data">
     <div *ngIf="data.title != ''">
-        <h3><a (click)="ChangeUrl()">{{data.title}}</a></h3>
+        <h3><a class="titleLink"(click)="ChangeUrl()">{{data.title}}</a></h3>
     </div>
     <div *ngIf="data.url != ''">
         <iframe width="560" height="315" [src]="data.url | safe" title="YouTube video player" frameborder="0"
