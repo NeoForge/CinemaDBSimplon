@@ -33,4 +33,10 @@ export class MovieService {
   FindVideosByTVShow(id: number) {
     return this.http.get(`${environment.apiUrl}/tv/${id}/videos?api_key=${environment.apiKey}`);
   }
+  findActorInMovie(id : number) {
+    return this.http.get(`${environment.apiUrl}/movie/${id}/credits?api_key=${environment.apiKey}`);
+  }
+  findActorInTVShow(id : number) {
+    return this.http.get(`${environment.apiUrl}/tv/${id}/credits?api_key=${environment.apiKey}`);
+  }
 }
