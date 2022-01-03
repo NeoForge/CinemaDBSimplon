@@ -1,12 +1,21 @@
-<h1>{{data.title}}</h1>
-<img src={{data.image}}>
-<div *ngIf="data.videoUrl != ''">
-    <iframe width="560" height="315" [src]="data.videoUrl | safe" title="YouTube video player" frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-</div>
-<div *ngIf="data.ActorArray?.length >0">
-    <div *ngFor="let data of data.ActorArray">
-        <app-actor-card-detail  [data]="data"></app-actor-card-detail>
+<div class="BodyMovie">
+    <h1 class="title">{{data.title}}</h1>
+    <img src={{data.image}} class="image">
+    <div *ngIf="data.videoUrl != ''" class="videoDiv">
+        <iframe width="560" height="315" [src]="data.videoUrl | safe" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+    <div class="overview">
+        <p>{{data.overview}}</p>
+    </div>
+    <div class="info">
+        <p>{{data.release_date}}</p>
+        <p *ngFor="let genre of data.genres">{{genre.name}}</p>
+    </div>
+    <div *ngIf="data.ActorArray?.length >0">
+        <div *ngFor="let data of data.ActorArray">
+            <app-actor-card-detail  [data]="data"></app-actor-card-detail>
+        </div>
     </div>
 </div>
