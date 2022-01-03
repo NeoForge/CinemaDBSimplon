@@ -24,7 +24,7 @@ export class ActorCardComponent implements OnInit {
   }
   ChangeUrl()
   {
-    this.route.navigateByUrl(`detail/${this.actor.id}/${this.actor.media_type}`);
+    this.route.navigate(['/detail',this.actor.id,'person']);
   }
 
 }

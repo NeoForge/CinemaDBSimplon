@@ -1,0 +1,13 @@
+<div *ngIf="data">
+    <div *ngIf="data.title != ''">
+        <h3><a (click)="ChangeUrl()">{{data.title}}</a></h3>
+    </div>
+    <div *ngIf="data.url != ''">
+        <iframe width="560" height="315" [src]="data.url | safe" title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+    <div *ngIf ="data.url == ''">
+        <img src="https://media.istockphoto.com/videos/file-not-found-glitch-effect-text-digital-tv-distortion-4k-loop-video-id1146645934?s=640x640" width="560" height="315">
+    </div>
+</div>

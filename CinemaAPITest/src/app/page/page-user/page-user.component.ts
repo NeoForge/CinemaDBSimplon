@@ -24,7 +24,6 @@ export class PageUserComponent implements OnInit {
       this.actorSearchResults = [];
       this.movieService.multiSearch(this.searchValue, 1).subscribe((data:any) => {
         this.searchResults = data.results;
-        console.log(data);
         if(this.searchResults.length >= data.total_results-1){
           this.SortSearch();
         }

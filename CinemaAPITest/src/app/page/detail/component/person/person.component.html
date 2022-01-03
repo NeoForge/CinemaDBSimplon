@@ -1,0 +1,18 @@
+<div *ngIf="data">
+    <h1>{{data.name}}</h1>
+    <div *ngIf="data.image !=''">
+        <img [src]="data.image" alt="{{data.name}}">
+    </div>
+    <div *ngIf="data.TrailerTVArray?.length > 0">
+        <h1>Série Télé</h1>
+        <div *ngFor="let tv of data.TrailerTVArray">
+            <app-trailer-card [data]="tv"></app-trailer-card>
+        </div>
+    </div>
+    <div *ngIf ="data.TrailerMovieArray?.length > 0">
+        <h1>Film</h1>
+        <div *ngFor="let tv of data.TrailerMovieArray">
+            <app-trailer-card [data]="tv"></app-trailer-card>
+        </div>
+    </div>
+</div>

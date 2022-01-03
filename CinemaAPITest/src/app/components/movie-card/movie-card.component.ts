@@ -23,7 +23,7 @@ export class MovieCardComponent implements OnInit {
   }
   ChangeUrl()
   {
-    this.route.navigateByUrl(`detail/${this.movie.id}/${this.movie.media_type}`);
+    this.route.navigate(['/detail',this.movie.id,this.movie.media_type]);
   }
 
 }
