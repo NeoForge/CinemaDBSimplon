@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from 'src/app/apiService/movie.service';
+import { Movie } from 'src/app/movie';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-random',
@@ -33,6 +35,7 @@ export class RandomComponent implements OnInit {
     this.movie.FindMovie(id).subscribe({
       next: (data:any) => {
         this.randomResult = data;
+        this.randomResult.poster_path = environment.imageUrl+"/w185/"+this.randomResult.poster_path
       },
       error: (e) => {
         console.log('HTTP Error '+retries);

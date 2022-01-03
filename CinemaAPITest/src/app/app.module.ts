@@ -8,8 +8,11 @@ import { PageUserComponent } from './page/page-user/page-user.component';
 import { FormsModule } from '@angular/forms';
 import { MovieCardComponent } from './components/movie-card/movie-card.component';
 import { ActorCardComponent } from './components/actor-card/actor-card.component';
-import { NavbarComponent } from './components/navbar/navbar.component';
 import { RandomComponent } from './components/random/random.component';
+import { NotfoundComponent } from './modules/notfound/notfound.component';
+import { HomeComponent } from './modules/home/home.component';
+import { AboutComponent } from './modules/about/about.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +20,11 @@ import { RandomComponent } from './components/random/random.component';
     PageUserComponent,
     MovieCardComponent,
     ActorCardComponent,
-    NavbarComponent,
-    RandomComponent
+    RandomComponent,
+    NotfoundComponent,
+    HomeComponent,
+    AboutComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,
