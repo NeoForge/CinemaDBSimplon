@@ -1,0 +1,11 @@
+<div *ngIf="data">
+    <div *ngIf="data.name != null || data.name != ''">
+        <h3><a class="titleLink"(click)="ChangeUrl()">{{data.name}}</a></h3>
+    </div>
+    <div *ngIf="data.name != ''">
+        <img src={{data.image}}>
+    </div>
+    <div *ngIf ="data.name == ''">
+        <img src="https://media.istockphoto.com/videos/file-not-found-glitch-effect-text-digital-tv-distortion-4k-loop-video-id1146645934?s=640x640" width="560" height="315">
+    </div>
+</div>

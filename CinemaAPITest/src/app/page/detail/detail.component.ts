@@ -46,6 +46,7 @@ export class DetailComponent implements OnInit {
     this.service.FindMovieById(this.id).subscribe((data: any) => {
       this.data = data;
       this.data.image = this.image + data.poster_path;
+      this.data.ActorArray = [];
       this.service.FindVideosByMovie(this.id).subscribe((data: any) => {
         this.data.videos = data.results;
         if (this.data.videos.length > 0) {
@@ -55,6 +56,19 @@ export class DetailComponent implements OnInit {
         {
           this.data.videoUrl = "";
         }
+        this.service.findActorInMovie(this.id).subscribe((data: any) => {
+          let temp = data.cast;
+          let index = 0;
+          if(temp.length>5){ index = 5}else{ index = temp.length};
+          for(let i = 0; i < index; i++){
+            this.data.ActorArray.push( {
+              'name' : temp[i].name,
+              "image" : this.image + temp[i].profile_path,
+              "id" : temp[i].id
+            });
+          }
+          console.log(this.data);
+        });
       });
     });
   }
@@ -62,6 +76,7 @@ export class DetailComponent implements OnInit {
     this.service.FindTVShowById(this.id).subscribe((data: any) => {
       this.data = data;
       this.data.image = this.image + data.poster_path;
+      this.data.ActorArray = [];
       this.service.FindVideosByTVShow(this.id).subscribe((data: any) => {
         this.data.videos = data.results;
         if (this.data.videos.length > 0) {
@@ -71,6 +86,19 @@ export class DetailComponent implements OnInit {
         {
           this.data.videoUrl = "";
         }
+        this.service.findActorInTVShow(this.id).subscribe((data: any) => {
+          let temp = data.cast;
+          let index = 0;
+          if(temp.length>5){ index = 5}else{ index = temp.length};
+          for(let i = 0; i < index; i++){
+            this.data.ActorArray.push( {
+              'name' : temp[i].name,
+              "image" : this.image + temp[i].profile_path,
+              "id" : temp[i].id
+            });
+          }
+          console.log(this.data);
+        });
       });
     });
   }

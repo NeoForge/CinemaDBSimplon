@@ -1,0 +1,23 @@
+.BodyActor
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.imgActor
+{
+    width: 300px;
+    display: inline-flex;
+}
+.name
+{
+    align-self: center;
+}
+.paragraph
+{
+    display:inline-flex;
+    align-self: flex-end;
+    width: 70%;
+    margin-left: 20px;
+}

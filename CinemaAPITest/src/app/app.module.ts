@@ -15,6 +15,7 @@ import { TvshowComponent } from './page/detail/component/tvshow/tvshow.component
 import { PersonComponent } from './page/detail/component/person/person.component';
 import { MovieComponent } from './page/detail/component/movie/movie.component';
 import { TrailerCardComponent } from './page/detail/component/person/trailer-card/trailer-card.component';
+import { ActorCardDetailComponent } from './page/detail/component/other/actor-card-detail/actor-card-detail.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { TrailerCardComponent } from './page/detail/component/person/trailer-car
     TvshowComponent,
     PersonComponent,
     MovieComponent,
-    TrailerCardComponent
+    TrailerCardComponent,
+    ActorCardDetailComponent
   ],
   imports: [
     BrowserModule,

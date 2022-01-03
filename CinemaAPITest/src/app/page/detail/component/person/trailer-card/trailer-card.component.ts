@@ -10,9 +10,7 @@ export class TrailerCardComponent implements OnInit {
 
   constructor(private router : Router) { }
   @Input() data:any;
-  urlToLoad="";
   ngOnInit(): void {
-    this.urlToLoad="detail/"+this.data.id+"/"+this.data.media
   }
   ChangeUrl()
   {

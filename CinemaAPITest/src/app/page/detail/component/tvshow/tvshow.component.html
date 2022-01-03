@@ -5,3 +5,8 @@
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
         allowfullscreen></iframe>
 </div>
+<div *ngIf="data.ActorArray?.length >0">
+    <div *ngFor="let data of data.ActorArray">
+        <app-actor-card-detail  [data]="data"></app-actor-card-detail>
+    </div>
+</div>
