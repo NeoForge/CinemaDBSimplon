@@ -1,0 +1,32 @@
+<p>movie-detail works!</p>
+<div class="container">
+    <div class="row">
+        
+        <div class="col-md-8">
+            <img src="{{movie.poster_path}}" class="card-img-top" alt="...">
+        </div>
+        <div class="col-md-4">
+            <ul id="accordion" class="list-group">
+                <li *ngIf="movie.name" class="list-group-item">Nom: {{movie.name}}</li>
+                <li class="list-group-item">Vote: {{movie.vote_average}}</li>
+                    <li class="list-group-item">
+                        <a class="btn" data-bs-toggle="collapse" href="#collapse1">
+                            Genres
+                        </a>
+                    </li>
+                    <div id="collapse1" class="collapse show" data-bs-parent="#accordion">
+                        <li *ngFor="let genre of movie.genres" class="list-group-item">{{genre.name}}</li>
+                    </div>
+                
+                <li class="list-group-item">
+                    <a class="collapsed btn" data-bs-toggle="collapse" href="#collapse2">
+                        Résumé
+                    </a>
+                    <div id="collapse2" class="collapse" data-bs-parent="#accordion">
+                        {{movie.overview}}
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

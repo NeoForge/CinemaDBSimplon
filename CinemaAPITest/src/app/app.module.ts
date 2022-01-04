@@ -16,6 +16,11 @@ import { PersonComponent } from './page/detail/component/person/person.component
 import { MovieComponent } from './page/detail/component/movie/movie.component';
 import { TrailerCardComponent } from './page/detail/component/person/trailer-card/trailer-card.component';
 import { ActorCardDetailComponent } from './page/detail/component/other/actor-card-detail/actor-card-detail.component';
+import { RandomComponent } from './components/random/random.component';
+import { NotfoundComponent } from './modules/notfound/notfound.component';
+import { HomeComponent } from './modules/home/home.component';
+import { AboutComponent } from './modules/about/about.component';
+import { MovieDetailComponent } from './components/movie-detail/movie-detail.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +36,11 @@ import { ActorCardDetailComponent } from './page/detail/component/other/actor-ca
     MovieComponent,
     TrailerCardComponent,
     ActorCardDetailComponent
+      RandomComponent,
+    NotfoundComponent,
+    HomeComponent,
+    AboutComponent,
+    MovieDetailComponent
   ],
   imports: [
     BrowserModule,

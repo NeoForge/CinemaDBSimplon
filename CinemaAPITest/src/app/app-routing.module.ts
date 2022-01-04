@@ -9,7 +9,8 @@ const routes: Routes = [
   {path: '', redirectTo: 'search', pathMatch: 'full'},
   {path: '**', redirectTo: 'search', pathMatch: 'full'},
 ];
-
+  {path: 'random', component: RandomComponent},
+  {path: 'about', component: AboutComponent},
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
