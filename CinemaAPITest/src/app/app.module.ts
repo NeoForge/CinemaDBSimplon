@@ -21,6 +21,7 @@ import { MovieComponent } from './page/detail/component/movie/movie.component';
 import { TrailerCardComponent } from './page/detail/component/person/trailer-card/trailer-card.component';
 import { ActorCardDetailComponent } from './page/detail/component/other/actor-card-detail/actor-card-detail.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { RatingDecimalComponent } from './components/rating-decimal/rating-decimal.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     NotfoundComponent,
     HomeComponent,
     AboutComponent,
-    MovieDetailComponent
+    MovieDetailComponent,
+    RatingDecimalComponent
   ],
   imports: [
     BrowserModule,

@@ -32,6 +32,11 @@ export class MovieService {
     console.log("getlatest"+query);
     return this.http.get(query, httpOptions);
   }
+  GetPopulars() {
+    let query:string = `${environment.apiUrl}/movie/popular?api_key=${environment.apiKey}&language=en-US&page=1`;
+    console.log("getPopulars"+query);
+    return this.http.get(query,httpOptions);
+  }
   findAllTvShowByActorID(id : number,page : number) {
     return this.http.get(`${environment.apiUrl}/person/${id}/tv_credits?api_key=${environment.apiKey}&page=${page}`);
   }
