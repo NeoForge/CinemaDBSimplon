@@ -20,6 +20,7 @@ import { PersonComponent } from './page/detail/component/person/person.component
 import { MovieComponent } from './page/detail/component/movie/movie.component';
 import { TrailerCardComponent } from './page/detail/component/person/trailer-card/trailer-card.component';
 import { ActorCardDetailComponent } from './page/detail/component/other/actor-card-detail/actor-card-detail.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ActorCardDetailComponent } from './page/detail/component/other/actor-ca
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
