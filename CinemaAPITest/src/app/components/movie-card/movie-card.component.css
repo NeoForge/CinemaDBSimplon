@@ -3,7 +3,13 @@
     width: 286px;
     height: 430px;
     cursor: pointer;
+    transition: transform .2s;
 }
+
+.card-img-top:hover {
+    transform:scale(1.1);
+}
+
 .card
 {
     margin-left: 10px;
