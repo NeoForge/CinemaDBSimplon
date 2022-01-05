@@ -11,5 +11,6 @@ export class Movie {
     original_title: string = "";
     original_language: string = "";
     vote_average: number = 0;
+    release_date: string = "1970-01-27";
     genres: Array<Genres> = [];
 }

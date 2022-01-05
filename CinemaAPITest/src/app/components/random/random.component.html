@@ -6,7 +6,7 @@
     </div>
         
     <div *ngIf="randomResult">
-        <h3 class="text-center mt-3">Je vous suggère : <b>{{randomResult.original_title}}</b></h3>
+        <h3 class="text-center mt-3">Je vous suggère : <b>{{randomResult.title}}</b></h3>
         <app-movie-detail [movie]="randomResult"></app-movie-detail>
     </div>
 </div>

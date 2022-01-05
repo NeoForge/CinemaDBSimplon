@@ -33,8 +33,13 @@ export class MovieService {
     return this.http.get(query, httpOptions);
   }
   GetPopulars() {
-    let query:string = `${environment.apiUrl}/movie/popular?api_key=${environment.apiKey}&language=en-US&page=1`;
+    let query:string = `${environment.apiUrl}/movie/popular?api_key=${environment.apiKey}&language=fr-FR,en-US&page=1`;
     console.log("getPopulars"+query);
+    return this.http.get(query,httpOptions);
+  }
+  GetGenres() {
+    let query:string = `${environment.apiUrl}/genre/movie/list?api_key=${environment.apiKey}&language=fr-FR`;
+    console.log("getGenre"+query);
     return this.http.get(query,httpOptions);
   }
   findAllTvShowByActorID(id : number,page : number) {
