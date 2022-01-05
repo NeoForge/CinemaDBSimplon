@@ -1,0 +1,8 @@
+<ng-template #t let-fill="fill">
+    <span class="star" [class.full]="fill === 100" ngbTooltip="Moyenne des votes : {{movie.vote_average}}/10">
+      <span class="half" [style.width.%]="fill">&starf;</span>&starf;
+    </span>
+</ng-template>
+  
+<ngb-rating [(rate)]="movie.vote_average" [starTemplate]="t" [readonly]="true" [max]="10"></ngb-rating>
+  

@@ -1,6 +1,12 @@
-<h2>Laissez moi choisir un film pour vous !</h2>
-<button (click)="RandomMovie(latest.id)" >Montre moi</button>
-<div *ngIf="randomResult">
-    <p>Je vous suggère de regarder : <b>{{randomResult.original_title}}</b></p>
-    <app-movie-detail [movie]="randomResult"></app-movie-detail>
+<div class="container">
+    <h2>Laissez-moi choisir un film pour vous !</h2>
+    <div>
+        <button class="btn btn-primary mx-2" (click)="RandomMovie(latest.id)" >Au hasard complet ?</button>
+        <button class="btn btn-primary mx-2" (click)="RandomTendance()" >Un film tendance !</button>
+    </div>
+        
+    <div *ngIf="randomResult">
+        <h3 class="text-center mt-3">Je vous suggère : <b>{{randomResult.title}}</b></h3>
+        <app-movie-detail [movie]="randomResult"></app-movie-detail>
+    </div>
 </div>

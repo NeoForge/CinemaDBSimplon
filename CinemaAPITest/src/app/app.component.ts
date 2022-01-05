@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
   }
   
   ngOnInit(): void {
-
+    
     if (isPlatformBrowser(this.platformId)) {
       let navMain = document.getElementById('navbarCollapse');
       if (navMain) {

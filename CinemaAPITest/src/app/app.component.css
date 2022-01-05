@@ -69,3 +69,11 @@
   .nga-footer .hint:hover {
     opacity: 0.8;
   }
+
+  ::ng-deep .btn-link{
+    color: #656565;
+    font-size: 1.2rem;
+    font-weight: normal;
+    background-color: transparent;
+    text-decoration: none!important;
+}
